@@ -15,6 +15,7 @@ import com.poscodx.msa.service.emaillist.vo.EmaillistVo;
 
 import lombok.extern.slf4j.Slf4j;
 
+
 @Slf4j
 @RestController
 @RequestMapping("/")

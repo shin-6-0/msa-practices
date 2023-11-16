@@ -56,7 +56,7 @@ export default function Index() {
             if (json.result !== 'success') {
                 throw json.message;
             }
-
+            console.log(json);
             // Rendering(Update)
             setImageList([json.data, ...imageList]);
         } catch (err) {
@@ -87,7 +87,7 @@ export default function Index() {
             }
 
             // re-rendering(update)
-            setImageList(imageList.filter((item) => item.no !== parseInt(json.data.no)));
+            setImageList(imageList.filter((item) => item.no !== parseInt(json.data)));
         } catch (err) {
             console.error(err);
         }

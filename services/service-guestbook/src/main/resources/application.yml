@@ -1,27 +1,25 @@
 # spring configuration
 spring:
    application:
-      name: service-emaillist
+      name: service-guestbook
    profiles:
       active: development
 
-            
+
 ---
 # configuration: common
 mybatis:
    config-location: classpath:mybatis/configuration.xml
 
-
-# port=0일 때 client 포트를 매번 다르게 설정해준다. 
 server:
-   port: 0 
+   port: 0
    servlet:
       context-path: /
       encoding:
-         charset: UTF-8
+         charset: utf-8
          enabled: true
-         
 
+         
 ---
 # configuration: development
 spring:
@@ -56,8 +54,7 @@ eureka:
       registerWithEureka: true
       serviceUrl:
          defaultZone: http://localhost:8761/eureka
-           
-                            
+         
 ---
 # configuration: production
 spring:
@@ -90,9 +87,9 @@ logging:
          poscodx:
             msa:
                service:
-                  emaillist:
+                  guestbook:
                      exception: ERROR
-
+                              
 eureka:
    instance:
       preferIpAddress: true
@@ -100,4 +97,4 @@ eureka:
       fetchRegistry: true
       registerWithEureka: true
       serviceUrl:
-         defaultZone: http://192.168.0.92:8761/eureka                              
+         defaultZone: http://192.168.0.172:8761/eureka

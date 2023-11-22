@@ -34,7 +34,7 @@ module.exports = (env) => ({
         new CaseSensitivePathsPlugin(),
         new webpack.DefinePlugin({
             'process.env':{
-              'API_URL': JSON.stringify(process.env.NODE_ENV === 'development' ? 'http://localhost:8888' : 'http://192.168.0.172:8888') 
+              'API_URL': JSON.stringify(process.env.NODE_ENV === 'development' ? 'http://localhost:8888' : 'http://192.168.0.92:8888') 
             }
           })
     ],

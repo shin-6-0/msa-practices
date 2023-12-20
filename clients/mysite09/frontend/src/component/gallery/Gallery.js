@@ -39,7 +39,7 @@ export default function Index() {
             // 1. upload file image
             const formData = new FormData();
             formData.append('file', file);
-
+            
             let response = await fetch(`${process.env.API_URL}/api/storage`, {
                 method: 'post',
                 headers: {'Accept': 'application/json'},

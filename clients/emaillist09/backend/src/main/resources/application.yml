@@ -40,7 +40,16 @@ spring:
    devtools:
       livereload:
          enabled: true
-   
+         
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.0.92:3307/webdb?charset=utf8
+      username: webdb
+      password: webdb
+      hikari:
+         minimum-idle: 10
+         maximum-pool-size: 20
+         
 server:
    port: 8080
    servlet:
@@ -55,7 +64,15 @@ spring:
    config:
       activate:
          on-profile: production
-
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.0.3:3307/webdb?charset=utf8
+      username: webdb
+      password: webdb
+      hikari:
+         minimum-idle: 10
+         maximum-pool-size: 20
+         
 server:
    port: 8083
    servlet:
